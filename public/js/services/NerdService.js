@@ -11,7 +11,7 @@ angular.module('NerdService', []).factory('Nerd', ['$http', function($http) {
 		// call to POST and create a new nerd
 		create : function(nerdData) {
 			return $http.post('/api/nerds', nerdData);
-		}
+		},
 		
 		// call to delete a nerd
 		delete : function(id) {
