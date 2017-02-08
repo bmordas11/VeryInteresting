@@ -1,0 +1,4 @@
+VER_DATABASE=mongo_string_after_the_@
+VER_DB_USER=db_username
+VER_DB_PW=db_pass
+VER_DB=mongodb_url

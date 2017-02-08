@@ -6,18 +6,18 @@ var express			= require('express');
 var app				= express();
 var bodyParser		= require('body-parser');
 var methodOverride	= require('method-override');
+var mongoose		= require('mongoose');
+var dotenv			= require('dotenv');
 
 // configuration
-
-// config files
-var db = require('./config/db');
 
 // set our port
 var port = process.env.PORT || 8080;
 
 // connect to our mongoDB
-// uncomment next line after own credentials in config/db.js
-// mongoose.connect(db.url);
+dotenv.load();
+var databaseConnection = process.env.VER_DB;
+mongoose.connect(databaseConnection);
 
 // get all data/stuff of the body (POST) parameters
 // parse application/json
